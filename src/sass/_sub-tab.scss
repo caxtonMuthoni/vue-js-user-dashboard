@@ -1,0 +1,10 @@
+.sub-tab {
+    &__tab {
+        text-transform: capitalize !important;
+        margin-left: 3rem;
+    }
+
+    &__active-tab {
+        border: none !important;
+    }
+}
