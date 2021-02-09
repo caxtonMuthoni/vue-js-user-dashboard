@@ -119,6 +119,13 @@ export default {
 
     getBase64Image(e) {
       const file = e.target.files[0]
+      const fileSize = (file.size / (1024*1024)).toFixed(2)
+
+      if(fileSize > 2){
+         alert("please a upload a file less than 2.5MB")
+         e.target.value = ""
+         return;
+      }
       const reader = new FileReader();
       reader.onloadend = () => {
         // Getting the profile picture data
