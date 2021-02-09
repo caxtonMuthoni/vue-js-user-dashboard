@@ -10,6 +10,7 @@
                 <input
                   class="signup__form-input"
                   type="file"
+                  accept="image/*"
                   id="image"
                   placeholder="Profile picture"
                   required
@@ -122,7 +123,7 @@ export default {
       const fileSize = (file.size / (1024*1024)).toFixed(2)
 
       if(fileSize > 2){
-         alert("please a upload a file less than 2.5MB")
+         alert("please a upload a file less than 2MB")
          e.target.value = ""
          return;
       }
